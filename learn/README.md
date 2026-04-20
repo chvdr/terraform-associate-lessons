@@ -255,3 +255,98 @@ This repository currently starts as notes only. It can be expanded into a lab re
 ## Next Step
 
 The most useful next step is to turn this plan into actual exercises so each topic has a runnable Terraform example.
+
+## Day 1 Plan
+
+Day 1 is about getting the Terraform workflow into muscle memory.
+
+### Goal
+
+By the end of Day 1, you should be able to explain and run the basic lifecycle:
+
+- `terraform init`
+- `terraform fmt`
+- `terraform validate`
+- `terraform plan`
+- `terraform apply`
+- `terraform destroy`
+
+### Concepts To Learn Today
+
+- What Infrastructure as Code means
+- Why Terraform is declarative
+- What a provider does
+- What a resource block represents
+- The difference between configuration, state, and real infrastructure
+
+### Hands-On Outcome
+
+You should finish Day 1 with one minimal Terraform configuration and a clear explanation of what each command changed locally or remotely.
+
+### Day 1 Schedule
+
+1. Read for 20 minutes
+2. Build for 45 minutes
+3. Inspect and explain for 20 minutes
+4. Review for 15 minutes
+
+### Step 1: Read
+
+Read enough to answer these without guessing:
+
+- What problem does Terraform solve?
+- Why is the workflow centered around plan before apply?
+- What is the role of a provider plugin?
+
+### Step 2: Build
+
+Create a minimal example with:
+
+- one provider
+- one resource
+- one output
+
+Your focus is not cloud complexity. Your focus is understanding the workflow and the file structure Terraform creates locally.
+
+### Step 3: Run The Workflow
+
+Run these commands in order:
+
+```bash
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+terraform apply
+terraform show
+terraform output
+terraform destroy
+```
+
+After each command, answer:
+
+- What changed?
+- Did Terraform change local files, remote infrastructure, or both?
+- What would happen if this step were skipped?
+
+### Step 4: Review Questions
+
+You should be able to answer these by the end of Day 1:
+
+- What exactly does `terraform init` download or prepare?
+- Why does `terraform validate` not replace `terraform plan`?
+- What is the difference between `terraform show` and `terraform output`?
+- What does `terraform destroy` use to know what to remove?
+
+### Day 1 Success Criteria
+
+Day 1 is complete only if you can explain:
+
+- why Terraform needs state
+- why plans should be reviewed before apply
+- why Terraform is declarative rather than imperative
+- what files appeared in the directory after `init` and why
+
+### Best Next Move After Day 1
+
+When Day 1 is done, Day 2 should introduce variables, outputs, and simple references between resources.
